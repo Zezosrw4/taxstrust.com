@@ -53,46 +53,14 @@
   .nav-logo {
     display: flex;
     align-items: center;
-    gap: 12px;
     text-decoration: none;
   }
 
-  .logo-emblem {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1.5px solid var(--gold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: var(--navy-mid);
-  }
-
-  .logo-emblem span {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 8px;
-    font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 1px;
-    text-align: center;
-    line-height: 1.2;
-  }
-
-  .logo-text h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--gold);
-    line-height: 1;
-  }
-
-  .logo-text p {
-    font-size: 9px;
-    font-weight: 300;
-    color: var(--text-muted);
-    letter-spacing: 2px;
-    text-transform: uppercase;
+  .nav-logo img {
+    height: 48px;
+    width: auto;
+    mix-blend-mode: screen;
+    filter: brightness(1.1);
   }
 
   .nav-links {
@@ -940,11 +908,7 @@
 <!-- NAV -->
 <nav id="navbar">
   <a href="#home" class="nav-logo">
-    <div class="logo-emblem"><span>TAX<br>TRUST</span></div>
-    <div class="logo-text">
-      <h1>Tax Trust</h1>
-      <p>For Tax Consultancies</p>
-    </div>
+    <img src="TaxTrust.png" alt="Tax Trust For Tax Consultancies">
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#home" class="active">Home</a></li>
