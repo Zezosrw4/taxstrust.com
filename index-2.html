@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax Trust | For Tax Consultancies</title>
+<meta name="description" content="Expert tax consultancy services for businesses and individuals across the UAE — navigating corporate tax, VAT, and compliance with precision and integrity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0d1b2e;
+    --navy-mid: #142238;
+    --navy-light: #1c2e45;
+    --gold: #c9a84c;
+    --gold-light: #e2c47a;
+    --gold-pale: #f0dfa0;
+    --cream: #f5f0e8;
+    --white: #ffffff;
+    --text-muted: #8a9ab5;
+    --border: rgba(201,168,76,0.2);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 0 5%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(13,27,46,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .logo-emblem {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--navy-mid);
+  }
+
+  .logo-emblem span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 8px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .logo-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .logo-text p {
+    font-size: 9px;
+    font-weight: 300;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 10px 22px;
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--gold);
+    transition: all 0.3s;
+  }
+
+  /* ── HERO ── */
+  #home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 5% 80px;
+    position: relative;
+    overflow: hidden;
+    background: var(--navy);
+  }
+
+  #home::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  #home::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -100px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(28,46,69,0.8) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    margin-bottom: 28px;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 5vw, 68px);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: var(--white);
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 40px;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 14px 30px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    padding: 14px 30px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  .stat-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* Hero emblem */
+  .hero-emblem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .emblem-circle {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy-mid);
+    position: relative;
+    box-shadow: 0 0 60px rgba(201,168,76,0.08), inset 0 0 60px rgba(0,0,0,0.3);
+  }
+
+  .emblem-circle::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .emblem-stars {
+    font-size: 18px;
+    letter-spacing: 8px;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .emblem-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--white);
+    text-align: center;
+  }
+
+  .emblem-sub {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 6px;
+    text-align: center;
+  }
+
+  .emblem-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--border);
+    margin: 12px auto;
+  }
+
+  .emblem-uae {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+  }
+
+  .emblem-trn {
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  /* ── SECTIONS BASE ── */
+  section {
+    padding: 100px 5%;
+  }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+
+  .section-title.light { color: var(--white); }
+
+  .gold-rule {
+    width: 48px;
+    height: 2px;
+    background: var(--gold);
+    margin-top: 20px;
+    margin-bottom: 32px;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--cream); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-card {
+    background: var(--navy);
+    padding: 40px;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--gold);
+  }
+
+  .about-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .about-card-title {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+
+  .about-card-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 28px;
+  }
+
+  .detail-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .detail-icon {
+    font-size: 16px;
+    margin-top: 1px;
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+
+  .detail-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .detail-val {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 300;
+  }
+
+  .about-right .section-desc {
+    font-size: 16px;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 36px;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: var(--white);
+    border-left: 2px solid var(--gold);
+  }
+
+  .trust-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .trust-item h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .trust-item p {
+    font-size: 13px;
+    color: #666;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  /* ── SERVICES ── */
+  #services { background: var(--navy-mid); }
+
+  .services-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 60px;
+  }
+
+  .services-desc {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    align-self: end;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .service-card {
+    background: var(--navy);
+    padding: 40px 36px;
+    position: relative;
+    transition: background 0.3s;
+  }
+
+  .service-card:hover { background: var(--navy-light); }
+
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: rgba(201,168,76,0.15);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .service-icon {
+    font-size: 28px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ── WHY CHOOSE US ── */
+  #why { background: var(--cream); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .why-left .section-desc {
+    font-size: 16px;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+
+  .why-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .why-card {
+    background: var(--white);
+    padding: 28px 24px;
+    border-top: 2px solid transparent;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .why-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  }
+
+  .why-card-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+
+  .why-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .why-card p {
+    font-size: 13px;
+    color: #666;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--navy); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-left .section-desc {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .contact-detail-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--navy-light);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .contact-detail-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .contact-detail-val {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .license-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 36px;
+  }
+
+  .license-tag {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+  }
+
+  /* Contact form */
+  .contact-form-box {
+    background: var(--navy-mid);
+    padding: 44px;
+    border: 1px solid var(--border);
+  }
+
+  .contact-form-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .contact-form-box > p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: var(--navy);
+    border: 1px solid rgba(201,168,76,0.2);
+    color: var(--white);
+    padding: 12px 16px;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+
+  .form-group select { cursor: pointer; }
+  .form-group select option { background: var(--navy-mid); }
+
+  .form-group textarea { height: 100px; resize: none; }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 16px;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+  }
+
+  .btn-submit:hover { background: var(--gold-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080f1a;
+    padding: 48px 5%;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 300;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-links a {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ── FLOATING BUTTONS ── */
+  .floating-wa {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .floating-wa:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 24px rgba(37,211,102,0.5);
+  }
+
+  .floating-wa svg { width: 26px; height: 26px; fill: white; }
+
+  /* ── MOBILE NAV ── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--navy-mid); padding: 24px; gap: 20px; border-bottom: 1px solid var(--border); }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; }
+    .nav-cta { display: none; }
+
+    .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+    .hero-btns { justify-content: center; }
+    .hero-stats { justify-content: center; }
+    .hero-emblem { order: -1; }
+    .emblem-circle { width: 220px; height: 220px; }
+    .emblem-name { font-size: 20px; }
+
+    .about-grid,
+    .why-grid,
+    .contact-grid,
+    .services-header { grid-template-columns: 1fr; gap: 40px; }
+
+    .services-grid { grid-template-columns: 1fr; }
+    .why-cards { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  /* ── SCROLL ANIMATIONS ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* success toast */
+  #toast {
+    position: fixed;
+    bottom: 100px; right: 28px;
+    background: var(--navy-light);
+    border: 1px solid var(--gold);
+    color: var(--white);
+    padding: 14px 22px;
+    font-size: 13px;
+    font-weight: 400;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+  }
+
+  #toast.show { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <div class="logo-emblem"><span>TAX<br>TRUST</span></div>
+    <div class="logo-text">
+      <h1>Tax Trust</h1>
+      <p>For Tax Consultancies</p>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Get Consultation</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Licensed | Dubai Municipality</div>
+      <h1 class="hero-title">Your Trusted <em>Tax Partner</em> in the UAE</h1>
+      <p class="hero-sub">Expert tax consultancy services for businesses and individuals across the UAE — navigating corporate tax, VAT, and compliance with precision and integrity.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Free Consultation →</a>
+        <a href="#services" class="btn-outline">Our Services</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="stat-val">UAE</span>
+          <span class="stat-label">Established</span>
+        </div>
+        <div>
+          <span class="stat-val">5%</span>
+          <span class="stat-label">VAT Expertise</span>
+        </div>
+        <div>
+          <span class="stat-val">100%</span>
+          <span class="stat-label">Compliance Focus</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-emblem">
+      <div class="emblem-circle">
+        <div class="emblem-stars">★ ★</div>
+        <div class="emblem-name">TAX TRUST</div>
+        <div class="emblem-sub">For Tax Consultancies</div>
+        <div class="emblem-divider"></div>
+        <div class="emblem-uae">★ U.A.E ★</div>
+        <div class="emblem-trn">TRN: 105266493300001</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-left fade-up">
+        <div class="about-card">
+          <div class="about-card-name">Mr. Hossameldin Attallah</div>
+          <div class="about-card-title">Authorized Representative</div>
+          <div class="about-card-divider"></div>
+          <div class="detail-row">
+            <div class="detail-icon">🏛️</div>
+            <div>
+              <div class="detail-label">Commercial License</div>
+              <div class="detail-val">1580279</div>
+            </div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">📋</div>
+            <div>
+              <div class="detail-label">Tax Registration (TRN)</div>
+              <div class="detail-val">105266493300001</div>
+            </div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">📍</div>
+            <div>
+              <div class="detail-label">Head Office</div>
+              <div class="detail-val">Office 43–44, Al Fahidi, Bur Dubai, Dubai, UAE</div>
+            </div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">📞</div>
+            <div>
+              <div class="detail-label">Contact</div>
+              <div class="detail-val">+971 56 359 8068</div>
+            </div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">✉️</div>
+            <div>
+              <div class="detail-label">Email</div>
+              <div class="detail-val">taxtrust.ae@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-right fade-up">
+        <span class="section-label">About Us</span>
+        <h2 class="section-title">UAE Tax Expertise You Can Rely On</h2>
+        <div class="gold-rule"></div>
+        <p class="section-desc">Tax Trust For Tax Consultancies CO. L.L.C S.O.C is a UAE-licensed tax advisory firm registered with Dubai Municipality. We are dedicated to providing precise, reliable, and professional tax consultancy services to businesses and individuals operating across the Emirates.</p>
+        <div class="trust-item">
+          <div class="trust-icon">◆</div>
+          <div>
+            <h4>Fully Licensed & Registered</h4>
+            <p>Operating under Commercial License 1580279, issued by Dubai Municipality.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">◆</div>
+          <div>
+            <h4>VAT & Corporate Tax Compliant</h4>
+            <p>Registered with the Federal Tax Authority with TRN 105266493300001.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">◆</div>
+          <div>
+            <h4>Client-Centered Approach</h4>
+            <p>Tailored strategies built around your business needs and goals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="services-header fade-up">
+      <div>
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title light">Our Tax Services</h2>
+        <div class="gold-rule"></div>
+      </div>
+      <p class="services-desc">Comprehensive tax solutions designed for the UAE regulatory environment. From registration to filing, we handle it all.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-num">01</div>
+        <span class="service-icon">🏢</span>
+        <h3>Corporate Tax Advisory & Filing</h3>
+        <p>Expert guidance on UAE corporate tax regulations, calculation, and accurate submission of corporate tax returns.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-num">02</div>
+        <span class="service-icon">📊</span>
+        <h3>VAT Registration & Consultation</h3>
+        <p>Assistance with VAT registration, return filing, and ongoing compliance under the UAE VAT system (5%).</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-num">03</div>
+        <span class="service-icon">✅</span>
+        <h3>Tax Compliance & Planning</h3>
+        <p>Proactive tax planning strategies to optimize your tax position while ensuring full regulatory compliance.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-num">04</div>
+        <span class="service-icon">🚀</span>
+        <h3>Business Setup Tax Support</h3>
+        <p>Tax structuring advice for new businesses establishing operations in the UAE, from Free Zone to Mainland.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-num">05</div>
+        <span class="service-icon">📄</span>
+        <h3>Tax Return Filing</h3>
+        <p>Timely and accurate preparation and submission of all required tax returns to the Federal Tax Authority.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-num">06</div>
+        <span class="service-icon">💼</span>
+        <h3>Financial Tax Advisory</h3>
+        <p>Strategic financial advisory integrating tax efficiency into your overall business and investment decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div class="why-left fade-up">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">The Tax Trust Advantage</h2>
+        <div class="gold-rule"></div>
+        <p class="section-desc">We combine deep UAE tax expertise with a personalised approach to deliver outcomes that protect and grow your business.</p>
+      </div>
+      <div class="why-cards fade-up">
+        <div class="why-card">
+          <span class="why-card-icon">🎯</span>
+          <h3>Precision & Accuracy</h3>
+          <p>Every return and filing handled with meticulous attention to detail.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-card-icon">🔒</span>
+          <h3>Confidentiality</h3>
+          <p>Your financial data is handled with the highest level of privacy and discretion.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-card-icon">⚡</span>
+          <h3>Fast Turnaround</h3>
+          <p>Meeting all deadlines efficiently so you never face late-filing penalties.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-card-icon">🤝</span>
+          <h3>Personal Service</h3>
+          <p>Direct access to your consultant — not a call center. Real advice, real people.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-left fade-up">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title light">Let's Talk About<br>Your Taxes</h2>
+        <div class="gold-rule"></div>
+        <p class="contact-left section-desc" style="font-size:16px;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.8;margin-bottom:40px;">Reach out for a free initial consultation. We're here to make UAE tax compliance straightforward and stress-free.</p>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div>
+            <div class="contact-detail-label">Head Office</div>
+            <div class="contact-detail-val">Office 43–44, Al Fahidi, Bur Dubai<br>Dubai, United Arab Emirates</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div>
+            <div class="contact-detail-label">Phone</div>
+            <div class="contact-detail-val">+971 56 359 8068</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-val">taxtrust.ae@gmail.com</div>
+          </div>
+        </div>
+        <div class="license-tags">
+          <span class="license-tag">License: 1580279</span>
+          <span class="license-tag">TRN: 105266493300001</span>
+          <span class="license-tag">Dubai Municipality</span>
+        </div>
+      </div>
+      <div class="contact-form-box fade-up">
+        <h3>Free Consultation</h3>
+        <p>Fill in your details and we'll get back to you within 24 hours.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="fname" placeholder="John Smith">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="fphone" placeholder="+971 XX XXX XXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="femail" placeholder="you@company.com">
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select id="fservice">
+            <option value="">Select a service…</option>
+            <option>Corporate Tax Advisory & Filing</option>
+            <option>VAT Registration & Consultation</option>
+            <option>Tax Compliance & Planning</option>
+            <option>Business Setup Tax Support</option>
+            <option>Tax Return Filing</option>
+            <option>Financial Tax Advisory</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message (Optional)</label>
+          <textarea id="fmessage" placeholder="Tell us briefly about your tax needs…"></textarea>
+        </div>
+        <button class="btn-submit" onclick="submitForm()">Send Request →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy">© 2025 Tax Trust For Tax Consultancies CO. L.L.C S.O.C — All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/971563598068" class="floating-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- TOAST -->
+<div id="toast">✓ Message sent — we'll be in touch within 24 hours.</div>
+
+<script>
+  // Hamburger
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  // Close mobile nav on link click
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  });
+
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
+    });
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+
+  // Fade-up on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Form submit
+  function submitForm() {
+    const name = document.getElementById('fname').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    if (!name || !email) { alert('Please fill in your name and email.'); return; }
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
+    document.getElementById('fname').value = '';
+    document.getElementById('fphone').value = '';
+    document.getElementById('femail').value = '';
+    document.getElementById('fservice').value = '';
+    document.getElementById('fmessage').value = '';
+  }
+</script>
+</body>
+</html>
